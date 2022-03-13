@@ -11,6 +11,7 @@ module ml.diarpy.addressapp {
     requires eu.hansolo.tilesfx;
 
     requires java.prefs;
+    requires java.xml.bind;
 
     exports ml.diarpy.addressapp;
     exports ml.diarpy.addressapp.controller;
