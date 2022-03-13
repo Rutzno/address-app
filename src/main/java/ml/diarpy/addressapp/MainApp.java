@@ -14,7 +14,9 @@ import ml.diarpy.addressapp.controller.PersonEditDialog;
 import ml.diarpy.addressapp.controller.PersonOverview;
 import ml.diarpy.addressapp.model.Person;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.prefs.Preferences;
 
 /**
  * @author Mack_TB
@@ -121,5 +123,26 @@ public class MainApp extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public File getPersonFilePath() {
+        Preferences preferences = Preferences.userNodeForPackage(MainApp.class);
+        String filePath = preferences.get("filePath", null);
+        if (filePath != null) {
+            return new File(filePath);
+        } else {
+            return null;
+        }
+    }
+
+    public void setPersonFilePath(File file) {
+        Preferences preferences = Preferences.userNodeForPackage(MainApp.class);
+        if (file != null) {
+            preferences.put("filePath", file.getPath());
+            this.primaryStage.setTitle("AddressApp - " + file.getName());
+        } else {
+            preferences.remove("filePath");
+            this.primaryStage.setTitle("AddressApp");
+        }
     }
 }

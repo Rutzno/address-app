@@ -10,7 +10,8 @@ module ml.diarpy.addressapp {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 
-    opens ml.diarpy.addressapp to javafx.fxml;
+    requires java.prefs;
+
     exports ml.diarpy.addressapp;
     exports ml.diarpy.addressapp.controller;
     opens ml.diarpy.addressapp.controller to javafx.fxml;
