@@ -4,6 +4,12 @@ import javafx.beans.property.*;
 
 import java.time.LocalDate;
 
+/**
+ * @author Mack_TB
+ * @since 11/03/2022
+ * @version 1.0.4
+ */
+
 public class Person {
     private final StringProperty firstName;
     private final StringProperty lastName;
