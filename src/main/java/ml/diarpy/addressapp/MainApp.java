@@ -46,6 +46,7 @@ public class MainApp extends Application {
         personData.add(new Person("Japhet", "DIARRA"));
         personData.add(new Person("Will", "SMITH"));
         personData.add(new Person("Bob", "ATTO"));
+        personData.add(new Person("Morgan", "FREEMAN"));
     }
 
     public Stage getPrimaryStage() {
