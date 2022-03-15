@@ -13,6 +13,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import ml.diarpy.addressapp.controller.PersonEditDialog;
 import ml.diarpy.addressapp.controller.PersonOverview;
+import ml.diarpy.addressapp.controller.RootLayout;
 import ml.diarpy.addressapp.model.Person;
 import ml.diarpy.addressapp.model.PersonListWrapper;
 
@@ -118,11 +119,19 @@ public class MainApp extends Application {
             loader.setLocation(getClass().getResource("view/rootLayout.fxml"));
             rootLayout = loader.load();
 
+            RootLayout rootLayoutController = loader.getController();
+            rootLayoutController.setMainApp(this);
+
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+        File file = getPersonFilePath();
+        if (file != null) {
+            loadPersonDataFromFile(file);
         }
     }
 
