@@ -15,5 +15,6 @@ module ml.diarpy.addressapp {
 
     exports ml.diarpy.addressapp;
     exports ml.diarpy.addressapp.controller;
+    exports ml.diarpy.addressapp.model;
     opens ml.diarpy.addressapp.controller to javafx.fxml;
 }
