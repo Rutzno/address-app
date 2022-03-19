@@ -27,7 +27,7 @@ import java.util.prefs.Preferences;
 /**
  * @author Mack_TB
  * @since 11/03/2022
- * @version 1.0.4
+ * @version 1.0.5
  */
 
 public class MainApp extends Application {
@@ -38,7 +38,7 @@ public class MainApp extends Application {
     public MainApp() {
         personData.add(new Person("Alpha", "BAH"));
         personData.add(new Person("Djibril", "COULIBALY"));
-        personData.add(new Person("Maïmouna", "KEÎTA"));
+        personData.add(new Person("Maïmouna", "KEÏTA"));
         personData.add(new Person("Bassirou", "SOW"));
         personData.add(new Person("Aïssata", "WADIDIE"));
         personData.add(new Person("Hawa", "SANGARE"));

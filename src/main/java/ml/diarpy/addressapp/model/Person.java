@@ -7,7 +7,7 @@ import java.time.LocalDate;
 /**
  * @author Mack_TB
  * @since 11/03/2022
- * @version 1.0.4
+ * @version 1.0.5
  */
 
 public class Person {
