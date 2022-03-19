@@ -11,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import ml.diarpy.addressapp.controller.BirthdayStatistics;
 import ml.diarpy.addressapp.controller.PersonEditDialog;
 import ml.diarpy.addressapp.controller.PersonOverview;
 import ml.diarpy.addressapp.controller.RootLayout;
@@ -132,6 +133,35 @@ public class MainApp extends Application {
         File file = getPersonFilePath();
         if (file != null) {
             loadPersonDataFromFile(file);
+        }
+    }
+
+    /**
+     * Opens a dialog to show birthday statistics
+     */
+    public void showBirthdayStatistics() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("view.birthdayStatistics.fxml"));
+            AnchorPane anchorPane = loader.load();
+
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Birthday Statistics");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+
+            Scene scene = new Scene(anchorPane);
+            dialogStage.setScene(scene);
+            dialogStage.getIcons().add(new Image("file:src/main/resources/ml/diarpy/addressapp/image/address_book_icon.png"));
+
+
+            // Set the person into the controller.
+            BirthdayStatistics controller = loader.getController();
+            controller.setPersonData(personData);
+
+
+            dialogStage.showt();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
