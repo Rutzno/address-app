@@ -141,7 +141,7 @@ public class MainApp extends Application {
      */
     public void showBirthdayStatistics() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("view.birthdayStatistics.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("view/birthdayStatistics.fxml"));
             AnchorPane anchorPane = loader.load();
 
             Stage dialogStage = new Stage();
@@ -158,8 +158,7 @@ public class MainApp extends Application {
             BirthdayStatistics controller = loader.getController();
             controller.setPersonData(personData);
 
-
-            dialogStage.showt();
+            dialogStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }

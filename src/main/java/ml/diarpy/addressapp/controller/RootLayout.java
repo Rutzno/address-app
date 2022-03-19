@@ -98,4 +98,9 @@ public class RootLayout implements Initializable {
     private void handleClose() {
         System.exit(0);
     }
+
+    @FXML
+    private void handleShowBirthdayStatistics() {
+        mainApp.showBirthdayStatistics();
+    }
 }
