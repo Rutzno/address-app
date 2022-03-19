@@ -142,7 +142,7 @@ public class MainApp extends Application {
     /**
      * Returns the person file preference, i.e. the file that was last opened.
      * The preference is read from the OS specific registry. If no such
-     * preference can be found, null is returned.
+     * preference can be found, null is returned
      * @return File
      */
     public File getPersonFilePath() {
@@ -153,7 +153,7 @@ public class MainApp extends Application {
 
     /**
      * Sets the file path of the currently loaded file. The path is persisted in
-     * the OS specific registry.
+     * the OS specific registry
      *
      * @param file
      */
