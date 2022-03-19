@@ -139,14 +139,16 @@ public class MainApp extends Application {
         launch(args);
     }
 
+    /**
+     * Returns the person file preference, i.e. the file that was last opened.
+     * The preference is read from the OS specific registry. If no such
+     * preference can be found, null is returned.
+     * @return File
+     */
     public File getPersonFilePath() {
         Preferences preferences = Preferences.userNodeForPackage(MainApp.class);
         String filePath = preferences.get("filePath", null);
-        if (filePath != null) {
-            return new File(filePath);
-        } else {
-            return null;
-        }
+        return filePath != null ? new File(filePath) : null;
     }
 
     public void setPersonFilePath(File file) {
