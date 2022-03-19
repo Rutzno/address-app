@@ -176,7 +176,6 @@ public class MainApp extends Application {
             // Reading XML from the file and unmarshalling
             PersonListWrapper wrapper = (PersonListWrapper) um.unmarshal(file);
 
-
             personData.clear();
             personData.addAll(wrapper.getPersons());
 
@@ -187,7 +186,6 @@ public class MainApp extends Application {
             alert.setTitle("Error");
             alert.setHeaderText("Couldn't load data");
             alert.setContentText("Couldn't load data from file:\n" + file.getPath());
-
             alert.showAndWait();
         }
     }
@@ -211,7 +209,6 @@ public class MainApp extends Application {
             alert.setTitle("Error");
             alert.setHeaderText("Couldn't save data");
             alert.setContentText("Couldn't save data from file:\n" + file.getPath());
-
             alert.showAndWait();
         }
     }
