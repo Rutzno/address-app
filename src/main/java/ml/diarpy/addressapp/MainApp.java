@@ -151,6 +151,12 @@ public class MainApp extends Application {
         return filePath != null ? new File(filePath) : null;
     }
 
+    /**
+     * Sets the file path of the currently loaded file. The path is persisted in
+     * the OS specific registry.
+     *
+     * @param file
+     */
     public void setPersonFilePath(File file) {
         Preferences preferences = Preferences.userNodeForPackage(MainApp.class);
         if (file != null) {
